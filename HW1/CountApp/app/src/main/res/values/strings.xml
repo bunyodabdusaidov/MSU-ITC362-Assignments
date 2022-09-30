@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Count App</string>
+    <string name="tap_button">Tap</string>
+    <string name="tap_button_description">Button when clicked will increment the counter</string>
+    <string name="counter_text">0</string>
+    <string name="counter_text_description">Counter which will be incremented when the button is clicked</string>
+</resources>

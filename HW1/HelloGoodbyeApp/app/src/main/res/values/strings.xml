@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Hello Goodbye</string>
+    <string name="click_me_button">click_me_button</string>
+    <string name="click_me_text">CLICK ME</string>
+    <string name="hello_text_description">Hello text that appears in the first app launch</string>
+    <string name="hello_text">Hello</string>
+    <string name="goodbye_text">Good Bye</string>
+    <string name="goodbye_text_description">Goodbye text that appears when "CLICK ME" button is clicked</string>
+    <string name="hello_image_description">Image of elephant facing the user with text "Hello"</string>
+    <string name="goodbye_image_description">Image of elephant facing backwards to the user with text "Goodbye"</string>
+</resources>
