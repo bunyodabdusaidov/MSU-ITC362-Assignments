@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Traffic Light Simulator</string>
+
+    <string name="red_traffic_light_description">Traffic light has red light on</string>
+    <string name="yellow_traffic_light_description">Traffic light has yellow light on</string>
+    <string name="green_traffic_light_description">Traffic light has green light on</string>
+
+    <string name="stop_btn">STOP</string>
+    <string name="go_btn">GO</string>
+    <string name="wait_btn">WAIT</string>
+</resources>

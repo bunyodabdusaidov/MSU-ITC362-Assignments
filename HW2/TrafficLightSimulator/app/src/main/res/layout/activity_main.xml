@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/red_traffic_light"
+        android:layout_width="130dp"
+        android:layout_height="264dp"
+        android:layout_marginStart="146dp"
+        android:layout_marginTop="77dp"
+        android:layout_marginEnd="146dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/traffic_light_red"
+        android:contentDescription="@string/red_traffic_light_description"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/yellow_traffic_light"
+        android:layout_width="130dp"
+        android:layout_height="264dp"
+        android:layout_marginStart="146dp"
+        android:layout_marginTop="77dp"
+        android:layout_marginEnd="146dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/traffic_light_yellow"
+        android:contentDescription="@string/yellow_traffic_light_description"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/green_traffic_light"
+        android:layout_width="130dp"
+        android:layout_height="264dp"
+        android:layout_marginStart="146dp"
+        android:layout_marginTop="77dp"
+        android:layout_marginEnd="146dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/traffic_light_green"
+        android:contentDescription="@string/green_traffic_light_description"
+        android:visibility="invisible" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@null"
+        android:text="@string/stop_btn"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.682" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
