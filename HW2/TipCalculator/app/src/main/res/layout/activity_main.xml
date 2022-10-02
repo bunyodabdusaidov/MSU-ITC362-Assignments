@@ -1,18 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/label_bill"
+        style="@style/LabelStyle"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:minWidth="120dp"
+        android:text="@string/label_bill" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <EditText
+        android:id="@+id/amount_bill"
+        style="@style/InputStyle"
+        android:layout_alignBottom="@+id/label_bill"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:layout_toEndOf="@+id/label_bill"
+        android:hint="@string/amount_bill_hint"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/label_tip_percent"
+        style="@style/LabelStyle"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/label_bill"
+        android:layout_alignStart="@+id/label_bill"
+        android:layout_alignEnd="@+id/label_bill"
+        android:text="@string/label_tip_percent" />
+
+    <EditText
+        android:id="@+id/amount_tip_percent"
+        style="@style/InputStyle"
+        android:layout_alignEnd="@+id/amount_bill"
+        android:layout_alignBottom="@+id/label_tip_percent"
+        android:layout_toEndOf="@+id/label_tip_percent"
+        android:hint="@string/amount_tip_percent_hint"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        tools:ignore="TextContrastCheck" />
+    
+    <!-- Red Line -->
+    <View
+        android:id="@+id/red_line"
+        android:layout_width="match_parent"
+        android:layout_height="5dip"
+        android:layout_below="@+id/label_tip_percent"
+        android:layout_marginTop="20dp"
+        android:layout_alignStart="@+id/label_bill"
+        android:layout_alignEnd="@id/amount_bill"
+        android:background="@color/red" />
+
+    <TextView
+        android:id="@+id/label_tip"
+        style="@style/LabelStyle"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/red_line"
+        android:layout_alignStart="@id/label_bill"
+        android:layout_alignEnd="@id/label_bill"
+        android:text="@string/label_tip" />
+
+    <TextView
+        android:id="@+id/amount_tip"
+        style="@style/OutputStyle"
+        android:layout_alignEnd="@id/amount_bill"
+        android:layout_alignBottom="@+id/label_tip"
+        android:layout_toEndOf="@+id/label_tip" />
+
+    <TextView
+        android:id="@+id/label_total"
+        style="@style/LabelStyle"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/label_tip"
+        android:layout_alignStart="@id/label_bill"
+        android:layout_alignEnd="@id/label_bill"
+        android:text="@string/label_total" />
+
+    <TextView
+        android:id="@+id/amount_total"
+        style="@style/OutputStyle"
+        android:layout_alignEnd="@id/amount_tip"
+        android:layout_alignBottom="@id/label_total"
+        android:layout_toEndOf="@id/label_total" />
+
+</RelativeLayout>
