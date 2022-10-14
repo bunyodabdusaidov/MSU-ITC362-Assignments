@@ -38,8 +38,4 @@ public class MainActivity extends AppCompatActivity {
         Intent myIntent = new Intent(this, DataActivity.class);
         this.startActivity(myIntent);
     }
-
-
-
-
 }
