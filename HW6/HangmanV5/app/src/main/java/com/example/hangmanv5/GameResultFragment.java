@@ -10,7 +10,7 @@ import android.widget.TextView;
 import androidx.fragment.app.Fragment;
 
 public class GameResultFragment extends Fragment {
-    private TextView gameResulTV;
+    private TextView gameResultTV;
 
     @Override
     public View onCreateView(LayoutInflater inflater,
@@ -20,20 +20,20 @@ public class GameResultFragment extends Fragment {
     }
 
     private void setUpFragmentFui(ViewGroup container) {
-        if (gameResulTV == null) {
-            gameResulTV = new TextView(getActivity());
-            gameResulTV.setGravity(Gravity.CENTER);
-            gameResulTV.setTextSize(36);
-            container.addView(gameResulTV);
+        if (gameResultTV == null) {
+            gameResultTV = new TextView(getActivity());
+            gameResultTV.setGravity(Gravity.CENTER);
+            gameResultTV.setTextSize(36);
+            container.addView(gameResultTV);
         }
     }
 
     public void setResult(String result) {
-        gameResulTV.setText(result);
+        gameResultTV.setText(result);
     }
 
     public void onStart() {
         super.onStart();
-        gameResulTV.setText("GOOD LUCK");
+        gameResultTV.setText("GOOD LUCK");
     }
 }
