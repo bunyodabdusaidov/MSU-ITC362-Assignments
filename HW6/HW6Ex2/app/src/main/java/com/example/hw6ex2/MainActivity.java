@@ -12,14 +12,12 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    TrafficLight trafficLight;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        trafficLight = new TrafficLight();
         TextView traffic = findViewById(R.id.traffic_light_text);
-        traffic.setText("" + trafficLight.getRed());
+        traffic.setText(R.string.red);
         traffic.setTextColor(getColor(R.color.red));
 
         FragmentManager fragmentManager = getSupportFragmentManager();
@@ -48,19 +46,19 @@ public class MainActivity extends AppCompatActivity {
         TextView trafficLightTV = trafficLightFragmentView.findViewById(R.id.traffic_light_text);
         switch (state) {
             case 1: //setting the label to red
-                trafficLightTV.setText(trafficLight.getRed());
+                trafficLightTV.setText(R.string.red);
                 trafficLightTV.setTextColor(getColor(R.color.red));
                 //incrementing the state
                 state += 1;
                 break;
             case 2: //setting the label to yellow
-                trafficLightTV.setText(trafficLight.getYellow());
+                trafficLightTV.setText(R.string.yellow);
                 trafficLightTV.setTextColor(getColor(R.color.yellow));
                 //incrementing the state
                 state += 1;
                 break;
             case 3: //setting the label to green
-                trafficLightTV.setText(trafficLight.getGreen());
+                trafficLightTV.setText(R.string.green);
                 trafficLightTV.setTextColor(getColor(R.color.green));
                 state = 1;
                 break;

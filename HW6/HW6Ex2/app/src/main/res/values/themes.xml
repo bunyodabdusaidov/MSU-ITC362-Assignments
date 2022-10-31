@@ -14,5 +14,17 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="textStyle" parent="@android:style/TextAppearance">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal|center_vertical</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="buttonStyle" parent="textStyle">
+        <item name="android:textSize">26sp</item>
+        <item name="backgroundTint">@color/buttonColor</item>
+    </style>
 
 </resources>
