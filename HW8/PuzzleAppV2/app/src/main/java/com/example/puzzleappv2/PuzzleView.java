@@ -84,7 +84,7 @@ public class PuzzleView extends RelativeLayout {
             tvs[i].setOnTouchListener(null);
     }
 
-    // Return position index within screen of TextView at index tvIndex
+    // Returns position index within screen of TextView at index tvIndex
     // Accuracy is half a TextView's height
     public int tvPosition(int tvIndex) {
         return (params[tvIndex].topMargin + labelHeight/2) / labelHeight;
@@ -106,11 +106,27 @@ public class PuzzleView extends RelativeLayout {
         positions[toPosition] = tvIndex;
     }
 
-    // Return the current user solution as an array of Strings
+    // Returns the current user solution as an array of Strings
     public String [] currentSolution() {
         String [] current = new String[tvs.length];
         for (int i = 0; i < current.length; i++)
             current[i] = tvs[positions[i]].getText().toString();
         return current;
+    }
+
+    // Returns index of TextView whose location includes y
+    public int indexOfTextView(int y) {
+        int position = y / labelHeight;
+        return positions[position];
+    }
+
+    // Returns text inside TextView whose index is tvIndex
+    public String getTextViewText(int tvIndex) {
+        return tvs[tvIndex].getText().toString();
+    }
+
+    // Replace text inside TextView whose index is tvIndex with s
+    public void setTextViewText(int tvIndex, String s) {
+        tvs[tvIndex].setText(s);
     }
 }
