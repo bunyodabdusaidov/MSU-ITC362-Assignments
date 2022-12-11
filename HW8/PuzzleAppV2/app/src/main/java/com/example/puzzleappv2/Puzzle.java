@@ -48,11 +48,4 @@ public class Puzzle {
         return parts.length;
     }
 
-    public String wordToChange() {
-        return "MOBILE";
-    }
-
-    public String replacementWord() {
-        return "ANDROID";
-    }
 }

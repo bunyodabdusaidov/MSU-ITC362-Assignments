@@ -113,20 +113,4 @@ public class PuzzleView extends RelativeLayout {
             current[i] = tvs[positions[i]].getText().toString();
         return current;
     }
-
-    // Returns index of TextView whose location includes y
-    public int indexOfTextView(int y) {
-        int position = y / labelHeight;
-        return positions[position];
-    }
-
-    // Returns text inside TextView whose index is tvIndex
-    public String getTextViewText(int tvIndex) {
-        return tvs[tvIndex].getText().toString();
-    }
-
-    // Replace text inside TextView whose index is tvIndex with s
-    public void setTextViewText(int tvIndex, String s) {
-        tvs[tvIndex].setText(s);
-    }
 }
